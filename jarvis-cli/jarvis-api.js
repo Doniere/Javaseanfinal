@@ -1,4 +1,4 @@
-/* let express = require('express')
+let express = require('express')
 let app = express()
 let Marvel = require('./avengers')
 
@@ -24,4 +24,4 @@ app.get('/', function(request,response) {
 
 app.listen('4000', function() {
   console.log('running on port 4000')
-}) */
+})
