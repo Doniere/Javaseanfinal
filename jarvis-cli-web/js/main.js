@@ -2,7 +2,24 @@ var root = 'http://slattaker.tgb.ninja:3000/#';
 var useHash = true;
 var hash = '#';
 var router = new Navigo(root, useHash, hash);
+var HomePage = require('./web-pages/home-page.js')
+var AvengersPage = require('./web-pages/avengers-page.js')
 
+
+router
+  .on(function () {
+    document.getElementById('content').innerHTML = ''
+    HomePage()
+  })
+  .on({
+    'avengers': function () {
+     document.getElementById('content').innerHTML = ''
+     AvengersPage() 
+    }
+  })
+
+
+/*
 var createCard = function(arr) {
   for (var x=0; x<arr.length; x++){
     var card = document.createElement('div')
@@ -62,4 +79,6 @@ router.on(function () {
   button.innerHTML = 'Get Avengers'
 
   content.append(button)
-}).resolve();
+})
+*/
+.resolve();
