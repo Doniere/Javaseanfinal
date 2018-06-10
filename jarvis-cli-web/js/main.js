@@ -5,7 +5,9 @@ var router = new Navigo(root, useHash, hash);
 var HomePage = require('./web-pages/home-page')
 var AvengersPage = require('./web-pages/avengers-page')
 var HulkDetailPage = require('./web-pages/hulk-detail-page')
-
+var VisionDetailPage = require('./web-pages/vision-detail-page')
+var ThorDetailPage = require('./web-pages/thor-detail-page')
+var CaptainamericaDetailPage = require('./web-pages/captainamerica-detail-page')
 router
   .on(function () {
     document.getElementById('content').innerHTML = ''
@@ -20,7 +22,19 @@ router
     'avengers/hulk': function () {
      document.getElementById('content').innerHTML = ''
      HulkDetailPage() 
-    }
+    },
+    'avengers/vision': function () {
+     document.getElementById('content').innerHTML = ''
+     VisionDetailPage() 
+    },
+     'avengers/thor': function () {
+     document.getElementById('content').innerHTML = ''
+     ThorDetailPage() 
+    },
+     'avengers/captainamerica': function () {
+     document.getElementById('content').innerHTML = ''
+       CaptainamericaDetailPage()
+     }
   })
 
 /*
