@@ -2,21 +2,22 @@ var Menu = require('../web-components/menu-component')
 var getAvengers = require('../web-components/avengers-component')
 var VisionDetailPage = function() {
 
-    Menu()
+ //   Menu()
   var content = document.getElementById('content')
   var button = document.createElement('button')
   button.onclick = function(){
-    console.log('hello from avengers button')
+    window.location.href = 'http://marvel.com/universe/Vision_(Victor_Shade)#axzz5I4yEHq5E'
   }
   button.innerHTML = 'Get Vision  Info'
 
-  /* var card = document.createElementById('div')
-   * card.className'w3-card-4'
-   * var img = document.createElement('img')
-   * img.src = '../app/assets/littlehulk.png'
-   * card.append(img)
-   * */
-
-  content.append(button)}
+   var card = document.createElement('div')
+   card.className = 'w3-card-4'
+   var img = document.createElement('img')
+   img.src = 'assets/vision.png'
+   card.append(img)
+  
+  content.append(card)
+  content.append(button)
+}
   module.exports = VisionDetailPage
 

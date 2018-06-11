@@ -1,4 +1,4 @@
-var root = 'http://slattaker.tgb.ninja:3000/#';
+var root = 'http://slattaker.tgb.ninja:3000';
 var useHash = true;
 var hash = '#';
 var router = new Navigo(root, useHash, hash);
@@ -8,6 +8,7 @@ var HulkDetailPage = require('./web-pages/hulk-detail-page')
 var VisionDetailPage = require('./web-pages/vision-detail-page')
 var ThorDetailPage = require('./web-pages/thor-detail-page')
 var CaptainamericaDetailPage = require('./web-pages/captainamerica-detail-page')
+var SpidermanDetailPage = require('./web-pages/spiderman-detail-page')
 router
   .on(function () {
     document.getElementById('content').innerHTML = ''
@@ -34,7 +35,11 @@ router
      'avengers/captainamerica': function () {
      document.getElementById('content').innerHTML = ''
        CaptainamericaDetailPage()
-     }
+     },
+    'avengers/spiderman': function () {
+    document.getElementById('content').innerHTML = ''
+      SpidermanDetailPage()
+    }
   })
 
 /*

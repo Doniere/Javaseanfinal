@@ -11,19 +11,35 @@
       
        if(arr[x].name == 'Hulk'){
            img.src = '/assets/littlehulk.png'
+          //Hulk On-click referece
+           cbutton.onclick = function () {
+              window.location.href = '#/avengers/hulk'
+           }
           }
          else  if(arr[x].name == 'Captain America'){
              img.src = '/assets/captainamerica.png'
+             cbutton.onclick = function () {
+             window.location.href = '#/avengers/captainamerica'
             }
+           }
           else  if(arr[x].name == 'Spider-Man'){
               img.src = '/assets/spiderman.png'
+            cbutton.onclick = function () {
+            window.location.href = '#/avengers/spiderman'
+            }
              }
          else  if(arr[x].name == 'Vision'){
              img.src = '/assets/vision.png'
+            cbutton.onclick = function () {
+            window.location.href = '#/avengers/vision'
+            }
             }
             
          else  if(arr[x].name == 'Thor'){
              img.src = '/assets/thorpic.png'
+            cbutton.onclick = function () {
+            window.location.href = '#/avengers/thor'
+            }
             }  
           
       // img.src = '/assets/thorpic.png'
